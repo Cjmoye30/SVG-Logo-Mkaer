@@ -1,7 +1,6 @@
 {
   "name": "svg-logo-maker",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +11,14 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.7",
+    "inquirer": "^8.2.4"
+  },
   "bugs": {
     "url": "https://github.com/Cjmoye30/SVG-Logo-Mkaer/issues"
   },
-  "homepage": "https://github.com/Cjmoye30/SVG-Logo-Mkaer#readme"
+  "homepage": "https://github.com/Cjmoye30/SVG-Logo-Mkaer#readme",
+  "keywords": [],
+  "description": ""
 }
