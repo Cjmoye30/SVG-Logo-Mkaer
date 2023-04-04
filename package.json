@@ -20,5 +20,8 @@
   },
   "homepage": "https://github.com/Cjmoye30/SVG-Logo-Mkaer#readme",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
 }

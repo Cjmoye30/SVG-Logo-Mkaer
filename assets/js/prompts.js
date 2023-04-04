@@ -7,12 +7,15 @@
 
 // WHEN I am prompted for the text color
 // THEN I can enter a color keyword (OR a hexadecimal number)
+// implement test to determine if the text color is correct
 
 // WHEN I am prompted for a shape
 // THEN I am presented with a list of shapes to choose from: circle, triangle, and square
 
 // WHEN I am prompted for the shape's color
 // THEN I can enter a color keyword (OR a hexadecimal number)
+// implement test to determine if the shape color is correct
+
 
 // WHEN I have entered input for all the prompts
 // THEN an SVG file is created named `logo.svg`
@@ -24,6 +27,7 @@
 // prompt the user
 // import the inquirer package
 const inquirer = require('inquirer');
+const Shapes = require("../../lib/shapes");
 
 const questions = [
     {
@@ -31,16 +35,22 @@ const questions = [
         message: "Please enter the text for your logo - Three characters or less.",
         name: "logoText"
     },
+    {
+        type: "list",
+        name: "shape",
+        choices: ["Circle", "Triangle", "Square"]
+    },
 ]
 
 function displayQuestions() {
-    console.log("Hello from the prompts JS file!");
-
     inquirer
-    .prompt(questions)
-    .then((answers) => {
-        console.log(answers)
-    })
+        .prompt(questions)
+        .then((answers) => {
+            console.log(answers);
+
+            console.log(answers.logoText);
+            Shapes(answers.shape);
+        })
 
 }
 
