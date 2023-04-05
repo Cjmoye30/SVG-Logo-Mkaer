@@ -1,29 +1,8 @@
-// ----- Acceptance Criteria -----
-
-// GIVEN a command-line application that accepts user input
-// WHEN I am prompted for text
-// THEN I can enter up to three characters
-// implement a test to make sure the character length is 3 characters exactly
-
-// WHEN I am prompted for the text color
-// THEN I can enter a color keyword (OR a hexadecimal number)
-
-// WHEN I am prompted for a shape
-// THEN I am presented with a list of shapes to choose from: circle, triangle, and square
-
-// WHEN I am prompted for the shape's color
-// THEN I can enter a color keyword (OR a hexadecimal number)
-
-// WHEN I have entered input for all the prompts
-// THEN an SVG file is created named `logo.svg`
-// AND the output text "Generated logo.svg" is printed in the command line
-
-// WHEN I open the `logo.svg` file in a browser
-// THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 // prompt the user
 // import the inquirer package
 const inquirer = require('inquirer');
+const Shapes = require("../../lib/shapes");
 
 const questions = [
     {
@@ -31,17 +10,52 @@ const questions = [
         message: "Please enter the text for your logo - Three characters or less.",
         name: "logoText"
     },
+    {
+        type: "list",
+        name: "shape",
+        message: "Please select the shape you would like",
+        choices: ["Circle", "Triangle", "Square"]
+    },
+    {
+        type: "list",
+        name: "fillColor",
+        message: "Shape Fill Color - Would you like to enter in a Hexadecimal number, or select from standard colors",
+        choices: ["Hexadecimal", "Standard Colors"]
+    },
+]
+
+const colorDetails = [
+    {
+        type: "list",
+        name: "selectedFillColor",
+        message: "Please select from the list of six colors.",
+        choices: ["Red", "Yellow", "Blue", "Orange", "Green", "Violet"]
+    },
+    {
+        type: "input",
+        name: "HexFillColor",
+        message: "Enter in hex number for your color",
+
+    },
 ]
 
 function displayQuestions() {
-    console.log("Hello from the prompts JS file!");
-
     inquirer
-    .prompt(questions)
-    .then((answers) => {
-        console.log(answers)
-    })
+        .prompt(questions)
+        .then((answers) => {
 
+            const userText = answers.logoText;
+            const userShape = answers.shape;
+
+            if (answers.fillColor === "Standard Colors") {
+                inquirer
+                    .prompt(colorDetails[0])
+                    .then((answers) => {
+                        // console.log(answers);
+                        Shapes(userShape, answers.selectedFillColor)
+                    })
+            }
+        })
 }
 
 module.exports = displayQuestions;
