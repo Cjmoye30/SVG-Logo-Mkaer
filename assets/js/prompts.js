@@ -3,6 +3,10 @@
 // import the inquirer package
 const inquirer = require('inquirer');
 const Shapes = require("../../lib/shapes");
+const { createSVG } = require('../../lib/svgDoc')
+const { writeFile } = require('fs/promises');
+const { join } = require('path');
+
 
 const questions = [
     {
@@ -52,10 +56,14 @@ function displayQuestions() {
                     .prompt(colorDetails[0])
                     .then((answers) => {
                         // console.log(answers);
-                        Shapes(userShape, answers.selectedFillColor)
+                        Shapes(userShape, answers.selectedFillColor);
+                        return writeFile(join(__dirname, "../examples"), createSVG());
                     })
             }
         })
 }
 
 module.exports = displayQuestions;
+
+// C:\Users\cjmoy\bootcamp\svg-logo-maker\examples
+// C:\Users\cjmoy\bootcamp\svg-logo-maker\examples\logo.svg
