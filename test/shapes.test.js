@@ -1,10 +1,14 @@
 // Importing the Shapes.js file so we can run our tests
 const { describe } = require("yargs");
-const Shapes = require("../lib/shapes");
+const Circle = require('./circle');
+const Square = require('./square');
+const Triangle = require('./triangle');
 
-describe("Shapes", () => {
-    describe("Circle", () => {
-        it("should cx and cy dimensions equal to eachother", () => {
+describe("Triangle", () => {
+    describe("Triangle", () => {
+        it("triangle testing ------ -", () => {
+            const shape = new Triangle();
+            
 
         })
     })
