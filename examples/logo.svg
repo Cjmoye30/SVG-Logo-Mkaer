@@ -1,6 +1,6 @@
 
         <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg"><path d="M10 10"/>
-        <rect width="100%" height="100%" fill="#1F4DC6"/>
-        <text x="150" y="125" font-size="50" text-anchor="middle" fill="#BECBEF">RiP</text>
+        <rect width="100%" height="100%" fill="Red"/>
+        <text x="150" y="125" font-size="50" text-anchor="middle" fill="Yellow">LFG</text>
         </svg>
         
