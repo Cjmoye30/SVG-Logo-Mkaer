@@ -19,7 +19,7 @@
 
   ### Screenshots: 
 
-  - [Walkthrough Video]("https://drive.google.com/file/d/1oEbnCRbkKLwOWq3kMa9N_1bDdjy0opl2/view?usp=sharing")
+  - [Walkthrough Video](https://drive.google.com/file/d/1oEbnCRbkKLwOWq3kMa9N_1bDdjy0opl2/view?usp=sharing)
   - Screenshots:
   ![CLI Interface](/assets/images/SVGCreator-2.png)
 
@@ -28,7 +28,7 @@
   ![Example2 SVG](/assets/images/example2.svg)
 
   ![Example3 SVG](/assets/images/example3.svg)
-  
+
 
   ### Usage:
   ```md
