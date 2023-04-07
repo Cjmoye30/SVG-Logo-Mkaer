@@ -1,4 +1,4 @@
-// index.js file which is going initiate all of the JS files that are going to be created
+// Index file which runs the CLI JavaScript
 const prompts = require("./lib/prompts")
 
 function init (){
