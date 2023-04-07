@@ -19,19 +19,26 @@
 
   ### Screenshots: 
 
-  - [Walkthrough Video]()
+  - [Walkthrough Video]("https://drive.google.com/file/d/1oEbnCRbkKLwOWq3kMa9N_1bDdjy0opl2/view?usp=sharing")
   - Screenshots:
   ![CLI Interface](/assets/images/SVGCreator-2.png)
+
   ![Example1 SVG](/assets/images/example1.svg)
+
   ![Example2 SVG](/assets/images/example2.svg)
+
   ![Example3 SVG](/assets/images/example3.svg)
+  
 
   ### Usage:
-  - node index.js
+  ```md
+  - node index
+  ```
 
   ### Tests
+  ```md
   - npm test
-
+  ```
   ### Questions:
 
   If you have any suggestions on how to upgrade this application, then please contact me via the links below:
